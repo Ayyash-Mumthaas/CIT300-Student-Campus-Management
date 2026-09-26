@@ -1,0 +1,19 @@
+# Compiled Java
+*.class
+*.jar
+*.war
+
+# Eclipse
+/bin/
+.settings/
+.metadata/
+
+# IntelliJ / VS Code (if anyone uses them later)
+.idea/
+*.iml
+.vscode/
+out/
+
+# OS files
+.DS_Store
+Thumbs.db
