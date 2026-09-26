@@ -9,6 +9,11 @@ public class StudentLinkedList {
     }
 
     public void addStudent(Student student) {
+        if (student.getMarks() < 0 || student.getMarks() > 100) {
+            System.out.println("Marks must be between 0 and 100.");
+            return;
+        }
+
         StudentNode current = head;
         while (current != null) {
             if (current.getStudent().getStudentId().equals(student.getStudentId())) {
@@ -44,6 +49,11 @@ public class StudentLinkedList {
     }
 
     public boolean updateStudent(String studentId, String name, String programme, int marks) {
+        if (marks < 0 || marks > 100) {
+            System.out.println("Marks must be between 0 and 100.");
+            return false;
+        }
+
         Student student = searchStudent(studentId);
         if (student == null) {
             return false;
